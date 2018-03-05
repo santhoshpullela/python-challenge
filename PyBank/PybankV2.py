@@ -1,24 +1,31 @@
 import os
 import csv
-
-
 budgetrev =[]
+changerev = []
 months=[]
-filepath = os.path.join("Resources", "budget_data_1.csv")
+tempchg = 0
+filepath = os.path.join("Resources",input("Please Enter the Filename: "))
 #oppath = os.path.join('output', 'PyBankOutput.txt')
 
 with open(filepath, newline ='') as csvfile:
     filereader = csv.reader(csvfile, delimiter = ",")
     next(filereader, None)
+    
     for row in filereader:
         months.append(row[0])
-        budgetrev.append(int(row[1]))  
+        budgetrev.append(int(row[1])) 
         count = len(budgetrev)
         totalrev = sum(budgetrev)
-        avgrev = round((totalrev/count),2)
         max_value = max(budgetrev)
         min_value = min(budgetrev)
+        
+for index,item in enumerate(budgetrev):
+    tempchg = item - tempchg
+    changerev.append(tempchg)
+    tempchg = item
 
+changerev.pop(0)
+avgrev = round(sum(changerev)/count,2)
 budgetAnalysis = dict(zip(budgetrev,months))
 for k,v in budgetAnalysis.items():
     if k == max_value:

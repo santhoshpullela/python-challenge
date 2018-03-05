@@ -8,7 +8,7 @@ candidateOr= []
 candidateSet = []
 temp = 0
 
-filepath = os.path.join("Resources", "election_data_1.csv")
+filepath = os.path.join("Resources", input("Please Enter the Filename: "))
 
 with open(filepath, newline= '') as csvfile:
     
