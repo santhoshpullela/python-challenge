@@ -2,6 +2,6 @@
 _________________________________
 Total Number of months: 41
 Total Revenue         : $18971412
-Average Revenue       : $-6594.12
-Greatest Increase in Revenue is on Sep-15 and the value is 1195111
-Greatest Decrease in Revenue is on Aug-14 and the value is -1172384
+Average Revenue       : $-6758.975
+Greatest Increase in Revenue is on Feb-16 and the value is $1837235.0
+Greatest Decrease in Revenue is on Aug-14 and the value is $-1779747.0

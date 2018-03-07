@@ -38,6 +38,7 @@ with open(filepath, newline = '') as csvfile:
                 newstate.append(tempstate)
 
 newssn1 = ["***-**-" + ssn for ssn in newssn]  
+
 outputdata = zip(empl_id, firstname , lastname, dateofbirth, newssn1 , newstate)
 
 output_path = os.path.join('output', 'new.csv')
